@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* ### Primary */
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+
+    /* ### Neutral */
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    color: var(--VeryDarkMagenta);
+    background: url('./images/bg-pattern-top-desktop.svg') left top no-repeat, url('./images/bg-pattern-bottom-desktop.svg') bottom no-repeat;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+}
+/* --------------------TEXT FORMATTING-------------------- */
+h1 {
+    font-size: 3.7rem;
+}
+.avatar h4 {
+    color: var(--SoftPink) !important;
+    margin-top: 10px;
+}
+.box p {
+    padding: 0 31px 40px 31px;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+h3 {
+    display: inline-block;
+}
+section#row-1 p {
+    margin-top: 4%;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+/* ----------------------MAIN STYLING---------------------- */
+main {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    padding: 7% 4%;
+    grid-gap: 4.2%;
+}         
+
+/* --------------------SECTION STYLING-------------------- */
+/* SECTION 1 */
+.stars {
+    background-color: var(--LightGrayishMagenta);
+    margin: 5px;
+}
+
+/* SECTION 2 */
+section#row-2 {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+section#row-2 div.stars {
+    padding: 31px 31px;
+    border-radius: 10px;
+    width: 80%;
+}
+section#row-2 div.stars:nth-child(2){
+    transform: translate3d(68px,0,0);
+}
+section#row-2 div.stars:nth-child(3){
+    transform: translate3d(136px,0,0);
+}
+section#row-2 div.stars img{
+    padding-right: 9px;
+}
+section#row-2 div.stars img:nth-child(5){
+    padding-right: 33px;
+}
+
+/* SECTION 3 */
+section#row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.3%;
+    padding: 6% 4%;
+}
+section#row-3 img {
+    border-radius: 100%;
+    width: 42px;
+    margin-right: 9%;
+}
+section#row-3 div.box {
+    background-color: var(--VeryDarkMagenta);
+    color: var(--White);
+    border-radius: 15px;
+}
+.one {
+    transform: translateY(-40%);
+}
+.two {
+    transform: translateY(-20%);
+}
+.avatar {
+    display: flex;
+    align-items: center;
+    padding: 36px 31px;
+}
+
+/* FOOTER STYLE */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* -----=================RESPONSIVENESS-----================= */
+@media screen and (max-width: 896px){ 
+    body {
+        background: url('./images/bg-pattern-top-mobile.svg') top no-repeat, url('./images/bg-pattern-bottom-mobile.svg') bottom no-repeat;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }  
+    section#row-3 {
+        display: flex;
+        flex-direction: column;
+    }  
+    section#row-2 div.stars {
+        padding: 20px 31px;
+        border-radius: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    section#row-2 div.stars:nth-child(2){
+        transform: translate3d(0,0,0);
+    }
+    section#row-2 div.stars:nth-child(3){
+        transform: translate3d(0,0,0);
+    }
+    section#row-2 div.stars img:nth-child(5) {
+        padding-right: 0;
+    }
+    .box {
+        margin-bottom: 20px;
+    }
+    .one {
+        transform: translateY(0);
+    }
+    .two {
+        transform: translateY(0);
+    }
+    .avatar {
+        padding: 36px 31px 20px;
+    }
+    /*=========================TEXTS=========================*/
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 15%;
+        margin-bottom: 8%;
+    }
+    section#row-1 p {
+        text-align: center;
+        margin: 4% 0 16%;
+        font-size: 1rem;
+        line-height: 2rem;
+        padding: 0 2%;
+    }
+    .stars h3 {
+        margin-top: 10px;
+        font-size: .8rem;
+    }
+    section#row-3 h3 {
+        font-size: .9rem;
+    }
+    section#row-3 h4 {
+        font-size: .8rem;
+    }
+    .box p {
+        padding: 0 31px 31px;
+        /*font-size: .9rem;
+        font-weight: 500;*/
+        line-height: 1.5rem; 
+        font-size: .6rem;
+    }
+}
+@media screen and (max-width: 897px) and (min-width: 1131px){
+    section#row-1 p {
+        margin-bottom: 5%;
+        margin-top: 10%;
+    }
+    main {
+        padding-top: 9%;
+    }
+}
